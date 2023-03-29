@@ -1,0 +1,27 @@
+<div class="table-responsive">
+    <table class="table table-primary">
+        <thead>
+            <tr>
+                <th scope="col">Resolution</th>
+                <th scope="col">Size</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <form action="" method="post">
+                <input type="text" name="url" value="{{current_video['url']}}" hidden>
+                {% for audio in current_video["video"]["audio_data"] %}
+                    <tr class="text-center">
+                        <td scope="row">{{audio["stream"]}}</td>
+                        <td scope="row">{{audio["size"]}}</td>
+                        <td>
+                            <!-- <input type="submit" class="btn btn-success" name="download_video" value="Download"> -->
+                            <!-- <a href="" class="btn btn-success">Download</a> -->
+                            <button type="submit" class="btn btn-success" name="download_audio" value="{{audio['tag']}}">Download</button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </form>
+        </tbody>
+    </table>
+</div>

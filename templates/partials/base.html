@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- Favicon -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon">
+    
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
+    <!-- FontAwsome -->
+    <script src="{{ url_for('static', filename='assets/fontawesome/all.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/fontawesome/all.min.js') }}"></script>
+    
+    <title>tubler</title>
+</head>
+<body>
+    <main class="main p-0 m-0" id="main">
+        <div class="container-fluid p-0 m-0">
+                <nav class="navbar navbar-expand-sm navbar-light bg-light shadow">
+                    <div class="container d-flex flex-between">
+                        <a class="navbar-brand" href="#">Tubler</a>
+                        <a class="nav-link active" aria-current="page" href="https://www.youtube.com/" target="_blank">Youtube</a>
+                    </div>
+                </nav>
+        </div>
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+    <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.js') }}"></script>
+</body>
+</html>
